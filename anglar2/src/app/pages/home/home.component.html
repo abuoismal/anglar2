@@ -1,0 +1,41 @@
+<section>
+  <div class="container-fluid">
+    <h5 class="font-bold text-color-secondary uppercase">hot sale</h5>
+    <div class="grid">
+      <div class="col-12 md:col-5">
+        <div class="card">
+          <p-galleria
+            [value]="images"
+            [circular]="true"
+            [showItemNavigators]="true"
+            [showThumbnails]="false"
+            [containerStyle]="{
+              'max-width': '100%',
+              'border-radius': '10px',
+              overflow: 'hidden'
+            }"
+          >
+            <ng-template pTemplate="item" let-item>
+              <img
+              #image
+                [src]="item.itemImageSrc"
+                style="width: 100%; display: block; height: 240px"
+                (error)="image.src='https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1691074776147-galaxy%20S22%20ultra%205G.jpg'"
+              />
+            </ng-template>
+          </p-galleria>
+        </div>
+      </div>
+            <div class="hidden md:flex md:col-6">
+          <app-cart [issmallcard]="true" [Products]="smallproducts" />
+        </div>
+      </div>
+      <div class="product">
+        <h2 class="text-color-secondary font-bold capitalize">
+          popular products
+        </h2>
+        <app-cart [issmallcard]="false" [Products]="popularproducts |popular"/>
+      </div>
+    </div>
+
+</section>
