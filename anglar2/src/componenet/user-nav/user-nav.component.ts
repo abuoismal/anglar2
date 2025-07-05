@@ -55,9 +55,11 @@ export class UserNavComponent implements OnInit {
 
     // Define navigation menu items
     this.items = [
-      { label: 'Home', icon: 'pi pi-home', path: '/user/home' },
-      { label: 'Products', icon: 'pi pi-sparkles', path: '/user/products' },
-      { label: 'Categories', icon: 'pi pi-th-large', path: '/user/categoty' },
+
+        { label: 'Home', icon: 'pi pi-home', url: '/user/home' },
+        { label: 'Products', icon: 'pi pi-sparkles', url: '/user/products' },
+        { label: 'Categories', icon: 'pi pi-th-large', url: '/user/categoty' },
+
     ];
 
     // Subscribe to cart count changes and update UI accordingly
