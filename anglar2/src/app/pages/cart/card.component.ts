@@ -6,6 +6,8 @@ import { CommonModule, NgClass } from '@angular/common';
 import { Tag, TagModule } from 'primeng/tag';
 import { ProductsService } from '../../core/service/products.service';
 
+// CartComponent: Displays and manages the shopping cart
+
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -13,16 +15,19 @@ import { ProductsService } from '../../core/service/products.service';
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
-export class CartComponent   {
+export class CartComponent implements OnInit {
+  // Holds all products currently in the cart
   allCartProducts: IProducts[] = [];
 
+  // On component initialization, load cart products from localStorage
   ngOnInit(): void {
-    if (localStorage.getItem('cartState') !== null) {
-      this.allCartProducts = JSON.parse(
-        localStorage.getItem('cartState') || ''
-      );
+    const cartState = localStorage.getItem('cartState');
+    if (cartState !== null) {
+      this.allCartProducts = JSON.parse(cartState);
     }
   }
+
+  // Clears the cart both in localStorage and in the component state
   clearCart(): void {
     localStorage.removeItem('cartState');
     this.allCartProducts = [];

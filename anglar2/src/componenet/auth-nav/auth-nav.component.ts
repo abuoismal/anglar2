@@ -10,22 +10,25 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./auth-nav.component.scss']
 })
 export class AuthNavComponent implements OnInit {
+
+  // Array to hold menu items for authentication navigation
   items: MenuItem[] | undefined;
 
+  // Angular lifecycle hook - runs on component initialization
   ngOnInit() {
+    // Define menu items for login and register pages
     this.items = [
       {
         label: 'login',
         icon: 'pi pi-sign-in',
-        path:'login'
+        path: 'login'
       },
       {
         label: 'register',
         icon: 'pi pi-user-plus',
-        path:'register'
+        path: 'register'
       },
-    ]
-
-
+    ];
   }
 };
+
