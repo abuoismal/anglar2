@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { IProducts } from '../../core/apiroot/Interface/http';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
-import { CommonModule, NgClass } from '@angular/common';
-import { Tag, TagModule } from 'primeng/tag';
-import { ProductsService } from '../../core/service/products.service';
+import { CommonModule } from '@angular/common';
+import { TagModule } from 'primeng/tag';
+
 
 // CartComponent: Displays and manages the shopping cart
 

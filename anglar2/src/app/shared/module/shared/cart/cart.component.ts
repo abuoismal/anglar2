@@ -4,13 +4,12 @@ import { ButtonModule } from 'primeng/button';
 import { IProducts } from '../../../../core/apiroot/Interface/http';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../../../core/service/cart.service';
-import { EmptyComponent } from '../../../empty/empty.component';
 import { MessagesModule } from 'primeng/messages';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NgClass, ButtonModule, RouterLink, MessagesModule, EmptyComponent,CommonModule],
+  imports: [NgClass, ButtonModule, RouterLink, MessagesModule,CommonModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss',
 })

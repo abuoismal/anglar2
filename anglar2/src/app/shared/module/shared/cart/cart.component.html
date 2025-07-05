@@ -51,7 +51,7 @@
         </div>
       </div>
       @if (!issmallcard) {
-        <!-- @if (!product.isaddtocart) { -->
+
       <p-button
         (click)="addToCart(product); product.isaddtocart = true"
         label="add to cart"
@@ -61,22 +61,11 @@
         iconPos="right"
       />
 
-      <!-- } @if (product.isaddtocart) {
-      <p-button
-        [routerLink]="['/cart']"
-        label="go to cart"
-        severity="contrast"
-        styleClass="my-2 uppercase w-full"
-        icon="pi pi-shopping-cart text-2xl"
-        iconPos="right"
-      />
-       -->
        }
     </div>
   </div>
   }@empty { @if (!issmallcard) {
   <div class="flex-1 text-center">
-    <!-- <app-empty></app-empty> -->
     <h2 class="capitalize">
       no product to show <span class="text-red-500">{{ searchKey }}</span>
     </h2>
